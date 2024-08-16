@@ -55,6 +55,18 @@ public class EmployeeTest {
         float expectedBonus = 2568.0f;
         assertEquals(expectedBonus, employeeEuroSupervisor.CalculateYearBonus());
     }
+    @Test
+    public void CalculateYearBonusUSDManager() {
+        float expectedBonus = 4936.0F;
+        assertEquals(expectedBonus, employeeUSDManager.CalculateYearBonus());
+    }
+
+    @Test
+    public void CalculateYearBonusUSDSupervisor() {
+        float expectedBonus =2943.0F ;
+        assertEquals(expectedBonus, employeeUSDSupervisor.CalculateYearBonus());
+    }
+    
 
     @Test
     public void CalculateYearBonusWorker() {
@@ -97,6 +109,8 @@ public class EmployeeTest {
         float actualCs = month % 2 == 0 ? 500.0f : 564.3333333333333f;
         assertEquals(employeeUSDWorker.cs(), actualCs);
     }
+             
+             
 
 
 }
